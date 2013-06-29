@@ -6,14 +6,14 @@
 		<style type="text/css" media="screen">
 			#status {
 				background-color: #000;
-				border: .2em solid #fff;
+				border: .2em solid #000;
 				margin: 2em 2em 1em;
 				padding: 1em;
 				width: 12em;
 				float: left;
-				-moz-box-shadow: 0px 0px 1.25em #ccc;
-				-webkit-box-shadow: 0px 0px 1.25em #ccc;
-				box-shadow: 0px 0px 1.25em #ccc;
+				-moz-box-shadow: 0px 0px 1.25em #000;
+				-webkit-box-shadow: 0px 0px 1.25em #000;
+				box-shadow: 0px 0px 1.25em #000;
 				-moz-border-radius: 0.6em;
 				-webkit-border-radius: 0.6em;
 				border-radius: 0.6em;
@@ -78,6 +78,7 @@
 					margin-top: 0;
 				}
 			}
+		
 	</style>
 </head>
 <body>

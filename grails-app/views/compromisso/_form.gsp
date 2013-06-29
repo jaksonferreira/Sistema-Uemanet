@@ -12,7 +12,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: compromissoInstance, field: 'dataComp', 'error')} required">
 	<label for="dataComp">
-		<g:message code="compromisso.dataComp.label" default="Data Comp" />
+		<g:message code="compromisso.dataComp.label" default="Data do Compromisso" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:datePicker name="dataComp" precision="day"  value="${compromissoInstance?.dataComp}"  />
@@ -20,7 +20,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: compromissoInstance, field: 'dataCriacao', 'error')} required">
 	<label for="dataCriacao">
-		<g:message code="compromisso.dataCriacao.label" default="Data Criacao" />
+		<g:message code="compromisso.dataCriacao.label" default="Data da Criacao" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:datePicker name="dataCriacao" precision="day"  value="${compromissoInstance?.dataCriacao}"  />

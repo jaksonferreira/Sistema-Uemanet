@@ -32,13 +32,33 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${cursoInstance?.cursos}">
+				<g:if test="${cursoInstance?.alunos}">
 				<li class="fieldcontain">
-					<span id="cursos-label" class="property-label"><g:message code="curso.cursos.label" default="Cursos" /></span>
+					<span id="alunos-label" class="property-label"><g:message code="curso.alunos.label" default="Alunos" /></span>
 					
-						<g:each in="${cursoInstance.cursos}" var="c">
-						<span class="property-value" aria-labelledby="cursos-label"><g:link controller="curso" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></span>
+						<g:each in="${cursoInstance.alunos}" var="a">
+						<span class="property-value" aria-labelledby="alunos-label"><g:link controller="aluno" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></span>
 						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${cursoInstance?.turmas}">
+				<li class="fieldcontain">
+					<span id="turmas-label" class="property-label"><g:message code="curso.turmas.label" default="Turmas" /></span>
+					
+						<g:each in="${cursoInstance.turmas}" var="t">
+						<span class="property-value" aria-labelledby="turmas-label"><g:link controller="turma" action="show" id="${t.id}">${t?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${cursoInstance?.tutor}">
+				<li class="fieldcontain">
+					<span id="tutor-label" class="property-label"><g:message code="curso.tutor.label" default="Tutor" /></span>
+					
+						<span class="property-value" aria-labelledby="tutor-label"><g:link controller="tutor" action="show" id="${cursoInstance?.tutor?.id}">${cursoInstance?.tutor?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

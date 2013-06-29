@@ -26,15 +26,13 @@
 					
 						<g:sortableColumn property="nome" title="${message(code: 'tutor.nome.label', default: 'Nome')}" />
 					
-						<g:sortableColumn property="email" title="${message(code: 'tutor.email.label', default: 'Email')}" />
+						<g:sortableColumn property="email" title="${message(code: 'tutor.email.label', default: 'E-mail')}" />
 					
-						<g:sortableColumn property="dataNasc" title="${message(code: 'tutor.dataNasc.label', default: 'Data Nasc')}" />
+						<g:sortableColumn property="dataNasc" title="${message(code: 'tutor.dataNasc.label', default: 'Data de Nascimento')}" />
 					
-						<g:sortableColumn property="endereco" title="${message(code: 'tutor.endereco.label', default: 'Endereco')}" />
+						<g:sortableColumn property="telfixo" title="${message(code: 'tutor.telfixo.label', default: 'Telefone')}" />
 					
-						<g:sortableColumn property="cidade" title="${message(code: 'tutor.cidade.label', default: 'Cidade')}" />
-					
-						<g:sortableColumn property="estado" title="${message(code: 'tutor.estado.label', default: 'Estado')}" />
+						<g:sortableColumn property="celular" title="${message(code: 'tutor.celular.label', default: 'Celular')}" />
 					
 					</tr>
 				</thead>
@@ -46,7 +44,7 @@
 					
 						<td>${fieldValue(bean: tutorInstance, field: "email")}</td>
 					
-						<td><g:formatDate date="${tutorInstance.dataNasc}" /></td>
+						<td><g:formatDate date="${tutorInstance.dataNasc}" format="dd/MM/yyyy" /></td>
 					
 						<td>${fieldValue(bean: tutorInstance, field: "endereco")}</td>
 					

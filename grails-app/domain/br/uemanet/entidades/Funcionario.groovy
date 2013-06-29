@@ -9,7 +9,7 @@ class Funcionario extends Pessoa{
 	Date dataCriacao
 
 	static constraints = {
-		funcao(inList:['coordenador','secretária','tutor','técnico','motorista'],blank:false)
+		funcao(inList:['coordenador','secretaria','tecnico','motorista'],blank:true)
 		admissao(nullable:false)
 		obs(maxSize:1000, nullable:true)
 	}

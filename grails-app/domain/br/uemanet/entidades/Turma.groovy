@@ -1,11 +1,12 @@
 package br.uemanet.entidades
 
 class Turma {
-	Curso curso
-	Tutor tutor
-	
-	static hasMany = [alunos: Aluno]
+	String periodo
 
-    static constraints = {
+	static hasMany = [alunos: Aluno]
+	static belongsTo = [tutor : Tutor, curso : Curso]
+	
+    static constraints = {periodo(inList:['1','2','3','4','5','6','7','8'], nullable:true)
+		
     }
 }

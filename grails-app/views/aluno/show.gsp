@@ -113,15 +113,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${alunoInstance?.curso}">
-				<li class="fieldcontain">
-					<span id="curso-label" class="property-label"><g:message code="aluno.curso.label" default="Curso" /></span>
-					
-						<span class="property-value" aria-labelledby="curso-label"><g:link controller="curso" action="show" id="${alunoInstance?.curso?.id}">${alunoInstance?.curso?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${alunoInstance?.dataCriacao}">
 				<li class="fieldcontain">
 					<span id="dataCriacao-label" class="property-label"><g:message code="aluno.dataCriacao.label" default="Data Criacao" /></span>

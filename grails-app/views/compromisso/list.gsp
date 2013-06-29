@@ -24,11 +24,11 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="descricao" title="${message(code: 'compromisso.descricao.label', default: 'Descricao')}" />
+						<g:sortableColumn property="descricao" title="${message(code: 'compromisso.descricao.label', default: 'Descrição')}" />
 					
-						<g:sortableColumn property="dataComp" title="${message(code: 'compromisso.dataComp.label', default: 'Data Comp')}" />
+						<g:sortableColumn property="dataComp" title="${message(code: 'compromisso.dataComp.label', default: 'Data do Compromisso')}" />
 					
-						<g:sortableColumn property="dataCriacao" title="${message(code: 'compromisso.dataCriacao.label', default: 'Data Criacao')}" />
+						<g:sortableColumn property="dataCriacao" title="${message(code: 'compromisso.dataCriacao.label', default: 'Data da Criacao')}" />
 					
 						<th><g:message code="compromisso.turma.label" default="Turma" /></th>
 					

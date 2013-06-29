@@ -131,6 +131,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${tutorInstance?.curso}">
+				<li class="fieldcontain">
+					<span id="curso-label" class="property-label"><g:message code="tutor.curso.label" default="Curso" /></span>
+					
+						<span class="property-value" aria-labelledby="curso-label"><g:link controller="curso" action="show" id="${tutorInstance?.curso?.id}">${tutorInstance?.curso?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${tutorInstance?.dataCriacao}">
 				<li class="fieldcontain">
 					<span id="dataCriacao-label" class="property-label"><g:message code="tutor.dataCriacao.label" default="Data Criacao" /></span>
@@ -145,6 +154,17 @@
 					<span id="rg-label" class="property-label"><g:message code="tutor.rg.label" default="Rg" /></span>
 					
 						<span class="property-value" aria-labelledby="rg-label"><g:fieldValue bean="${tutorInstance}" field="rg"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${tutorInstance?.turmas}">
+				<li class="fieldcontain">
+					<span id="turmas-label" class="property-label"><g:message code="tutor.turmas.label" default="Turmas" /></span>
+					
+						<g:each in="${tutorInstance.turmas}" var="t">
+						<span class="property-value" aria-labelledby="turmas-label"><g:link controller="turma" action="show" id="${t.id}">${t?.encodeAsHTML()}</g:link></span>
+						</g:each>
 					
 				</li>
 				</g:if>

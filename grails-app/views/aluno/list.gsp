@@ -26,15 +26,13 @@
 					
 						<g:sortableColumn property="nome" title="${message(code: 'aluno.nome.label', default: 'Nome')}" />
 					
-						<g:sortableColumn property="email" title="${message(code: 'aluno.email.label', default: 'Email')}" />
+						<g:sortableColumn property="email" title="${message(code: 'aluno.email.label', default: 'E-mail')}" />
 					
-						<g:sortableColumn property="dataNasc" title="${message(code: 'aluno.dataNasc.label', default: 'Data Nasc')}" />
+						<g:sortableColumn property="telfixo" title="${message(code: 'aluno.telfixo.label', default: 'Telefone')}" />
 					
-						<g:sortableColumn property="endereco" title="${message(code: 'aluno.endereco.label', default: 'Endereco')}" />
+						<g:sortableColumn property="celular" title="${message(code: 'aluno.celular.label', default: 'Celular')}" />
 					
-						<g:sortableColumn property="cidade" title="${message(code: 'aluno.cidade.label', default: 'Cidade')}" />
-					
-						<g:sortableColumn property="estado" title="${message(code: 'aluno.estado.label', default: 'Estado')}" />
+						<g:sortableColumn property="matricula" title="${message(code: 'aluno.matricula.label', default: 'Matricula')}" />
 					
 					</tr>
 				</thead>
@@ -46,13 +44,11 @@
 					
 						<td>${fieldValue(bean: alunoInstance, field: "email")}</td>
 					
-						<td><g:formatDate date="${alunoInstance.dataNasc}" /></td>
+						<td>${fieldValue(bean: alunoInstance, field: "telfixo")}</td>
 					
-						<td>${fieldValue(bean: alunoInstance, field: "endereco")}</td>
+						<td>${fieldValue(bean: alunoInstance, field: "celular")}</td>
 					
-						<td>${fieldValue(bean: alunoInstance, field: "cidade")}</td>
-					
-						<td>${fieldValue(bean: alunoInstance, field: "estado")}</td>
+						<td>${fieldValue(bean: alunoInstance, field: "matricula")}</td>
 					
 					</tr>
 				</g:each>

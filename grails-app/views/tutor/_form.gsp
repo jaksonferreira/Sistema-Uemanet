@@ -1,7 +1,5 @@
 <%@ page import="br.uemanet.entidades.Tutor" %>
 
-
-
 <div class="fieldcontain ${hasErrors(bean: tutorInstance, field: 'nome', 'error')} required">
 	<label for="nome">
 		<g:message code="tutor.nome.label" default="Nome" />
@@ -12,7 +10,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: tutorInstance, field: 'email', 'error')} ">
 	<label for="email">
-		<g:message code="tutor.email.label" default="Email" />
+		<g:message code="tutor.email.label" default="E-mail" />
 		
 	</label>
 	<g:field type="email" name="email" value="${tutorInstance?.email}"/>
@@ -20,7 +18,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: tutorInstance, field: 'dataNasc', 'error')} ">
 	<label for="dataNasc">
-		<g:message code="tutor.dataNasc.label" default="Data Nasc" />
+		<g:message code="tutor.dataNasc.label" default="Data de Nascimento" />
 		
 	</label>
 	<g:datePicker name="dataNasc" precision="day"  value="${tutorInstance?.dataNasc}" default="none" noSelection="['': '']" />
@@ -28,7 +26,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: tutorInstance, field: 'endereco', 'error')} ">
 	<label for="endereco">
-		<g:message code="tutor.endereco.label" default="Endereco" />
+		<g:message code="tutor.endereco.label" default="Endereço" />
 		
 	</label>
 	<g:textField name="endereco" value="${tutorInstance?.endereco}"/>
@@ -52,7 +50,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: tutorInstance, field: 'telfixo', 'error')} ">
 	<label for="telfixo">
-		<g:message code="tutor.telfixo.label" default="Telfixo" />
+		<g:message code="tutor.telfixo.label" default="Telefone" />
 		
 	</label>
 	<g:textField name="telfixo" value="${tutorInstance?.telfixo}"/>
@@ -66,51 +64,58 @@
 	<g:textField name="celular" value="${tutorInstance?.celular}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: tutorInstance, field: 'funcao', 'error')} required">
-	<label for="funcao">
-		<g:message code="tutor.funcao.label" default="Funcao" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select name="funcao" from="${tutorInstance.constraints.funcao.inList}" required="" value="${tutorInstance?.funcao}" valueMessagePrefix="tutor.funcao"/>
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: tutorInstance, field: 'admissao', 'error')} required">
 	<label for="admissao">
-		<g:message code="tutor.admissao.label" default="Admissao" />
+		<g:message code="tutor.admissao.label" default="Admissão" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:datePicker name="admissao" precision="day"  value="${tutorInstance?.admissao}"  />
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: tutorInstance, field: 'obs', 'error')} ">
-	<label for="obs">
-		<g:message code="tutor.obs.label" default="Obs" />
-		
-	</label>
-	<g:textArea name="obs" cols="40" rows="5" maxlength="1000" value="${tutorInstance?.obs}"/>
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: tutorInstance, field: 'cpf', 'error')} ">
 	<label for="cpf">
-		<g:message code="tutor.cpf.label" default="Cpf" />
+		<g:message code="tutor.cpf.label" default="CPF" />
 		
 	</label>
 	<g:textField name="cpf" value="${tutorInstance?.cpf}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: tutorInstance, field: 'dataCriacao', 'error')} required">
-	<label for="dataCriacao">
-		<g:message code="tutor.dataCriacao.label" default="Data Criacao" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:datePicker name="dataCriacao" precision="day"  value="${tutorInstance?.dataCriacao}"  />
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: tutorInstance, field: 'rg', 'error')} ">
 	<label for="rg">
-		<g:message code="tutor.rg.label" default="Rg" />
+		<g:message code="tutor.rg.label" default="RG" />
 		
 	</label>
 	<g:textField name="rg" value="${tutorInstance?.rg}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: tutorInstance, field: 'turmas', 'error')} ">
+	<label for="turmas">
+		<g:message code="tutor.turmas.label" default="Turmas" />
+		
+	</label>
+	
+<ul class="one-to-many">
+<g:each in="${tutorInstance?.turmas?}" var="t">
+    <li><g:link controller="turma" action="show" id="${t.id}">${t?.encodeAsHTML()}</g:link></li>
+</g:each>
+<li class="add">
+<g:link controller="turma" action="create" params="['tutor.id': tutorInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'turma.label', default: 'Turma')])}</g:link>
+</li>
+</ul>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: tutorInstance, field: 'obs', 'error')} ">
+	<label for="obs">
+		<g:message code="tutor.obs.label" default="Observação" />
+		
+	</label>
+	<g:textArea name="obs" cols="40" rows="5" maxlength="1000" value="${tutorInstance?.obs}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: tutorInstance, field: 'dataCriacao', 'error')} required">
+	<label for="dataCriacao">
+		<g:message code="tutor.dataCriacao.label" default="Data da Criação" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:datePicker name="dataCriacao" precision="day"  value="${tutorInstance?.dataCriacao}"  />
+</div>

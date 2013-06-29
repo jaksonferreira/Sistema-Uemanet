@@ -1,4 +1,3 @@
-
 <%@ page import="br.uemanet.entidades.Funcionario" %>
 <!DOCTYPE html>
 <html>
@@ -26,15 +25,13 @@
 					
 						<g:sortableColumn property="nome" title="${message(code: 'funcionario.nome.label', default: 'Nome')}" />
 					
-						<g:sortableColumn property="email" title="${message(code: 'funcionario.email.label', default: 'Email')}" />
+						<g:sortableColumn property="email" title="${message(code: 'funcionario.email.label', default: 'E-mail')}" />
 					
-						<g:sortableColumn property="dataNasc" title="${message(code: 'funcionario.dataNasc.label', default: 'Data Nasc')}" />
+						<g:sortableColumn property="dataNasc" title="${message(code: 'funcionario.dataNasc.label', default: 'Data de Nascimento')}" />
 					
-						<g:sortableColumn property="endereco" title="${message(code: 'funcionario.endereco.label', default: 'Endereco')}" />
+						<g:sortableColumn property="telfixo" title="${message(code: 'funcionario.telfixo.label', default: 'Telefone')}" />
 					
-						<g:sortableColumn property="cidade" title="${message(code: 'funcionario.cidade.label', default: 'Cidade')}" />
-					
-						<g:sortableColumn property="estado" title="${message(code: 'funcionario.estado.label', default: 'Estado')}" />
+						<g:sortableColumn property="celular" title="${message(code: 'funcionario.celular.label', default: 'Celular')}" />
 					
 					</tr>
 				</thead>
@@ -46,13 +43,11 @@
 					
 						<td>${fieldValue(bean: funcionarioInstance, field: "email")}</td>
 					
-						<td><g:formatDate date="${funcionarioInstance.dataNasc}" /></td>
+						<td><g:formatDate date="${funcionarioInstance.dataNasc}" format="dd/MM/yyyy"/></td>
 					
-						<td>${fieldValue(bean: funcionarioInstance, field: "endereco")}</td>
+						<td>${fieldValue(bean: funcionarioInstance, field: "telfixo")}</td>
 					
-						<td>${fieldValue(bean: funcionarioInstance, field: "cidade")}</td>
-					
-						<td>${fieldValue(bean: funcionarioInstance, field: "estado")}</td>
+						<td>${fieldValue(bean: funcionarioInstance, field: "celular")}</td>
 					
 					</tr>
 				</g:each>

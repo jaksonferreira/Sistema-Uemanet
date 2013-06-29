@@ -7,7 +7,16 @@
 		<g:message code="turma.alunos.label" default="Alunos" />
 		
 	</label>
-	<g:select name="alunos" from="${br.uemanet.entidades.Aluno.list()}" multiple="multiple" optionKey="id" size="5" value="${turmaInstance?.alunos*.id}" class="many-to-many"/>
+	
+<ul class="one-to-many">
+<g:each in="${turmaInstance?.alunos?}" var="a">
+    <li><g:link controller="aluno" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></li>
+</g:each>
+<li class="add">
+<g:link controller="aluno" action="create" params="['turma.id': turmaInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'aluno.label', default: 'Aluno')])}</g:link>
+</li>
+</ul>
+
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: turmaInstance, field: 'curso', 'error')} required">

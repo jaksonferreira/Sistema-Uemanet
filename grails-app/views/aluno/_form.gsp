@@ -12,7 +12,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: alunoInstance, field: 'email', 'error')} ">
 	<label for="email">
-		<g:message code="aluno.email.label" default="Email" />
+		<g:message code="aluno.email.label" default="E-mail" />
 		
 	</label>
 	<g:field type="email" name="email" value="${alunoInstance?.email}"/>
@@ -20,7 +20,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: alunoInstance, field: 'dataNasc', 'error')} ">
 	<label for="dataNasc">
-		<g:message code="aluno.dataNasc.label" default="Data Nasc" />
+		<g:message code="aluno.dataNasc.label" default="Data de Nascimento" />
 		
 	</label>
 	<g:datePicker name="dataNasc" precision="day"  value="${alunoInstance?.dataNasc}" default="none" noSelection="['': '']" />
@@ -28,7 +28,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: alunoInstance, field: 'endereco', 'error')} ">
 	<label for="endereco">
-		<g:message code="aluno.endereco.label" default="Endereco" />
+		<g:message code="aluno.endereco.label" default="Endereço" />
 		
 	</label>
 	<g:textField name="endereco" value="${alunoInstance?.endereco}"/>
@@ -52,7 +52,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: alunoInstance, field: 'telfixo', 'error')} ">
 	<label for="telfixo">
-		<g:message code="aluno.telfixo.label" default="Telfixo" />
+		<g:message code="aluno.telfixo.label" default="Telefone" />
 		
 	</label>
 	<g:textField name="telfixo" value="${alunoInstance?.telfixo}"/>
@@ -66,6 +66,22 @@
 	<g:textField name="celular" value="${alunoInstance?.celular}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: alunoInstance, field: 'cpf', 'error')} ">
+	<label for="cpf">
+		<g:message code="aluno.cpf.label" default="CPF" />
+		
+	</label>
+	<g:textField name="cpf" value="${alunoInstance?.cpf}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: alunoInstance, field: 'rg', 'error')} ">
+	<label for="rg">
+		<g:message code="aluno.rg.label" default="RG" />
+		
+	</label>
+	<g:textField name="rg" value="${alunoInstance?.rg}"/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: alunoInstance, field: 'matricula', 'error')} ">
 	<label for="matricula">
 		<g:message code="aluno.matricula.label" default="Matricula" />
@@ -74,35 +90,10 @@
 	<g:textField name="matricula" value="${alunoInstance?.matricula}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: alunoInstance, field: 'cpf', 'error')} ">
-	<label for="cpf">
-		<g:message code="aluno.cpf.label" default="Cpf" />
-		
-	</label>
-	<g:textField name="cpf" value="${alunoInstance?.cpf}"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: alunoInstance, field: 'curso', 'error')} required">
-	<label for="curso">
-		<g:message code="aluno.curso.label" default="Curso" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="curso" name="curso.id" from="${br.uemanet.entidades.Curso.list()}" optionKey="id" required="" value="${alunoInstance?.curso?.id}" class="many-to-one"/>
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: alunoInstance, field: 'dataCriacao', 'error')} required">
 	<label for="dataCriacao">
-		<g:message code="aluno.dataCriacao.label" default="Data Criacao" />
+		<g:message code="aluno.dataCriacao.label" default="Data da Criação" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:datePicker name="dataCriacao" precision="day"  value="${alunoInstance?.dataCriacao}"  />
 </div>
-
-<div class="fieldcontain ${hasErrors(bean: alunoInstance, field: 'rg', 'error')} ">
-	<label for="rg">
-		<g:message code="aluno.rg.label" default="Rg" />
-		
-	</label>
-	<g:textField name="rg" value="${alunoInstance?.rg}"/>
-</div>
-
