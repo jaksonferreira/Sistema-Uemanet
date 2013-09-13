@@ -92,8 +92,8 @@ src="${resource(dir:'images',file:'Aluno.png')}" border="0"
 					<td><a href="funcionario"><img
 src="${resource(dir:'images',file:'Funcionario.png')}" border="0"
 /></a></td>
-					<td><a href="tutor"><img
-src="${resource(dir:'images',file:'Tutor.png')}" border="0"
+					<td><a href="sala"><img
+src="${resource(dir:'images',file:'Sala1.jpg')}" border="0"
 /></a></td>
 					<td><a href="curso"><img
 src="${resource(dir:'images',file:'Cursos.png')}" border="0"

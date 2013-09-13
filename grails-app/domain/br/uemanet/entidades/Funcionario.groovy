@@ -7,6 +7,8 @@ class Funcionario extends Pessoa{
 	Date admissao
 	String obs
 	Date dataCriacao
+	
+	static hasMany = [turmas : Turma]
 
 	static constraints = {
 		funcao(inList:['coordenador','secretaria','tecnico','motorista'],blank:true)

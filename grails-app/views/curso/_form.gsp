@@ -1,7 +1,5 @@
 <%@ page import="br.uemanet.entidades.Curso" %>
 
-
-
 <div class="fieldcontain ${hasErrors(bean: cursoInstance, field: 'descricao', 'error')} ">
 	<label for="descricao">
 		<g:message code="curso.descricao.label" default="Descricao" />

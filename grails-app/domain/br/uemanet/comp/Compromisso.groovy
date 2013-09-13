@@ -1,13 +1,13 @@
 package br.uemanet.comp
 
+import br.uemanet.entidades.Funcionario
 import br.uemanet.entidades.Turma
-import br.uemanet.entidades.Tutor
 
 class Compromisso {
 	Date dataComp
 	String descricao
 	Turma turma
-	Tutor tutor
+	Funcionario tutor
 	Date dataCriacao
 
     static constraints = {
